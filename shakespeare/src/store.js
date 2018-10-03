@@ -2,7 +2,9 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 import axios from 'axios';
+import VueFilterDateFormat from 'vue-filter-date-format';
 
+Vue.use(VueFilterDateFormat);
 Vue.use(Vuex);
 var token = 'koOheljmQx'
 var config = {

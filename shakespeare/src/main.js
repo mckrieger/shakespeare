@@ -6,6 +6,7 @@ import router from './router'
 import store from './store';
 import VueFilterDateFormat from 'vue-filter-date-format';
 
+Vue.use(require('vue-moment'));
 Vue.use(VueFilterDateFormat);
 
 Vue.config.productionTip = false

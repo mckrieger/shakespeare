@@ -3,9 +3,12 @@
     <h1>Reviews</h1>
 
     <div v-for="item in items">
-      <span class="author">{{item.author}}</span>
-      <span class="rating">Rating: {{item.rating}}</span>
-      <span class="date">{{item.publish_date | dateFormat('YYYY.MM.DD')}}</span>
+      <router-link :to="{name: 'Detail', params: {reviewId:item.id }}">
+
+      <span class="author">{{item.author}} |</span>
+      <span class="rating">Rating: {{item.rating}} |</span>
+      <span class="date">{{new Date(item.publish_date) | moment("MMMM Do, YYYY, h:mm a")}}</span>
+      </router-link>
     </div>
   </div>
 </template>
