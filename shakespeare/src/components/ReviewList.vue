@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h1>Reviews</h1>
-
+  <div class="title">
+    <h1 class>Reviews</h1>
+    </div>
     <div v-for="item in items">
       <router-link :to="{name: 'Detail', params: {reviewId:item.id }}">
 
