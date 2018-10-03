@@ -3,13 +3,16 @@
     <h1>Reviews</h1>
 
     <div v-for="item in items">
-      <p>{{item.id}}</p>
+      <span class="author">{{item.author}}</span>
+      <span class="rating">Rating: {{item.rating}}</span>
+      <span class="date">{{item.publish_date | dateFormat('YYYY.MM.DD')}}</span>
     </div>
   </div>
 </template>
 
 
 <script>
+import VueFilterDateFormat from 'vue-filter-date-format';
   export default {
     name: 'ReviewList',
     data () {
